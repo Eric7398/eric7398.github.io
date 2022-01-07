@@ -103,12 +103,75 @@ input:focus, textarea:focus {
 	transform: scale(0.8);
 }
 
-.title {
-	font-size: 120px;
+:root{
+	--typewriterSpeed: 6s;
+}
+
+.title, .title1 {
+	font-size: 100px;
+	/* white-space: nowrap; */
 	margin-bottom: 12px;
 	text-align: left;
 	line-height: 1;
+
+	font-family: 'Source Code Pro', monospace !important;
+	position: relative;
 }
+
+.title1::before, .title1::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.title1::before{
+	background: rgb(245, 245, 245);
+	animation: typewriter var(--typewriterSpeed) steps(16) 1s forwards;
+}
+
+.title1::after{
+	width: .125em;
+	background: black;
+	animation: typewriter var(--typewriterSpeed) steps(16) 1s forwards,
+	blink .5s steps(2, start) infinite;
+
+}
+
+.title {
+	opacity: 0;
+	transform: translateY(3rem);
+}
+
+.header__para, .social__list{
+	opacity: 0;
+	transform: translateY(3rem);
+	animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1.5s) forwards;
+}
+@keyframes typewriter {
+	to { 
+		left: 100%; 
+	}
+}
+
+@keyframes blink {
+	to { 
+		visibility: hidden
+	}
+}
+
+@keyframes fadeInUp{
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+
+
 
 .blue {
 	color: dodgerblue !important; 
@@ -162,7 +225,7 @@ nav,
 	transition: all .4s;
 }
 
-.dark-theme .title,
+.dark-theme .title1,
 .dark-theme .section__title,
 .dark-theme .section__sub-title,
 .dark-theme .nav__link--anchor,
@@ -187,6 +250,14 @@ nav,
 .dark-theme .mail__btn {
 	background-color: white;
 	color: #242424;
+}
+
+.dark-theme .title1::before{
+	background-color: #242424;
+}
+
+.dark-theme .title1::after{
+	background-color: white;
 }
 /* 
 
@@ -653,7 +724,7 @@ footer {
 
 /* Small phones, tablets, large smart phones */
 @media (max-width: 768px) {
-	.title {
+	.title1{
 		font-size: 80px;
 	}
 	.header__para {
@@ -675,11 +746,18 @@ footer {
 
 /* Small phones */
 @media (max-width: 480px) {
-	.title {
-		font-size: 52px;
+	.title1 {
+		display: none;
+		
+	}
+
+	.title1::before {
+		content: "Hello!"
+		
 	}
 	.header__para {
 		font-size: 18px;
+		opacity: 1;
 	}
 	.nav__link:first-child {
 		display: none;
@@ -698,5 +776,15 @@ footer {
 	}
 	.model__half {
 		padding: 40px;
+	}
+
+	#canvas {
+		display:none;
+	}
+}
+
+@media (max-width: 935px) {
+	.title1 {
+		font-size: 80px;
 	}
 }
