@@ -4,7 +4,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const particlesArray = [];
 // let hue = 0;
-let drawing = false;
+// let drawing = false;
 
 window.addEventListener('resize', function () {
     canvas.width = window.innerWidth;
