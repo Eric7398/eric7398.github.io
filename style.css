@@ -24,6 +24,7 @@ a {
 	text-decoration: none;
 }
 
+
 ::-webkit-scrollbar {
 	width: 13px;
 }
@@ -340,8 +341,13 @@ nav,
 	left: 62%;
 	opacity: 0;
 	overflow: hidden;
-	/* transform: scale(1.5); */
+	filter: blur(3px);
+	transition: filter .4s ease;
 	animation: imgFadeUp 2s ease calc(var(--typewriterSpeed) + 1.5s) forwards;
+}
+
+.portrait__img:hover{
+	filter: none;
 }
 
 @keyframes imgFadeUp {
