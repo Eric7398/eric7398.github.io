@@ -67,6 +67,8 @@ class Particle {
     draw() {
         ctx.fillStyle = this.color;
         ctx.beginPath();
+        ctx.shadowColor = 'orange';
+        ctx.shadowBlur = 15;
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
     }
@@ -86,6 +88,8 @@ function handleParticles() {
                 ctx.beginPath();
                 ctx.strokeStyle = 'orange'
                 ctx.lineWidth = 10
+                ctx.shadowColor = 'orange';
+                ctx.shadowBlur = 15;
                 ctx.moveTo(particlesArray[i].x, particlesArray[i].y)
                 ctx.lineTo(particlesArray[j].x, particlesArray[j].y)
                 ctx.stroke();
