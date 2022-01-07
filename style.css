@@ -104,7 +104,7 @@ input:focus, textarea:focus {
 }
 
 :root{
-	--typewriterSpeed: 6s;
+	--typewriterSpeed: 3s;
 }
 
 .title, .title1 {
