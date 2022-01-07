@@ -676,7 +676,6 @@ footer {
 	position: relative;
 	background-color: #242424;
 	display: flex;
-	padding: 6% 0;
 }
 
 .footer__row {
@@ -759,7 +758,10 @@ footer {
 		content: "Hello!"
 		
 	}
-	.nav__link{
+	.nav__link:nth-child(3){
+		display: none;
+	}
+	.social__list{
 		opacity: 1;
 	}
 	.header__para {
@@ -787,16 +789,6 @@ footer {
 
 	#canvas {
 		display:none;
-	}
-}
-
-@media (max-width: 375px) {
-	.nav__link{
-		margin-left: 5px;
-	}
-
-	.nav__link:nth-child(3){
-		display: none;
 	}
 }
 
