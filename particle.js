@@ -84,7 +84,7 @@ function handleParticles() {
             // Pythagorean theorem 
             if (distance < 275) {
                 ctx.beginPath();
-                ctx.strokeStyle = particlesArray[i].color
+                ctx.strokeStyle = 'orange'
                 ctx.lineWidth = 10
                 ctx.moveTo(particlesArray[i].x, particlesArray[i].y)
                 ctx.lineTo(particlesArray[j].x, particlesArray[j].y)
