@@ -999,7 +999,8 @@ footer {
 	.header__para {
 		font-size: 20px;
 	}
-	.model {
+	.model,
+	.about {
 		top: 0;
 		left: 0;
 		transform: none;
@@ -1008,7 +1009,8 @@ footer {
 		flex-direction: column-reverse;
 		border-radius: 0;
 	}
-	.model__half {
+	.model__half,
+	.about__half {
 		width: 100%;
 	}
 }
@@ -1022,11 +1024,9 @@ footer {
 	.personal-logo{
 		width: 50px
 	}
-	.title::before {
-		content: "Hello!"
-		
-	}
-	.nav__link:nth-child(3){
+	.nav__link:nth-child(2),
+	.nav__link:nth-child(3)
+	{
 		display: none;
 	}
 	.social__list{
@@ -1036,9 +1036,7 @@ footer {
 		font-size: 18px;
 		opacity: 1;
 	}
-	.nav__link:first-child {
-		display: none;
-	}
+
 	.project__description--para {
 		display: none;
 	}
@@ -1051,7 +1049,8 @@ footer {
 	.project__description--sub-title {
 		margin-bottom: 8px;
 	}
-	.model__half {
+	.model__half,
+	.about__half {
 		padding: 40px;
 	}
 
