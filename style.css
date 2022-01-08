@@ -1018,9 +1018,24 @@ footer {
 /* Small phones */
 @media (max-width: 480px) {
 	.title {
-		display: none;
-		
+		font-size: 20px;
+		font-family: 'Roboto', sans-serif;
 	}
+	.title::before{
+		display: none;
+	}
+	
+	.title::after{
+		display: none;
+	
+	}
+
+	.header__para, .social__list{
+		transform: translateY(3rem);
+		animation: none;
+	}
+
+
 	.personal-logo{
 		width: 50px
 	}
