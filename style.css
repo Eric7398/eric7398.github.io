@@ -105,6 +105,19 @@ input:focus, textarea:focus {
 	width: 100%;
 }
 
+.link__click{
+	text-decoration: none; 
+	color:dodgerblue;
+}
+
+.link__click:hover{
+	color:orange;
+}
+.link__click:focus{
+	transform: scale(1.2);
+}
+
+
 .row {
 	width: 100%;
 	max-width: 1100px;
@@ -246,11 +259,18 @@ nav,
 
 .model--open nav,
 .model--open .scroll,
-.model--open .header {
+.model--open .header,
+
+.about--open nav,
+.about--open .scroll,
+.about--open .header,
+.about--open .mail__btn
+{
 	opacity: 0;
 	visibility: hidden;
 	transition: all .4s;
 }
+
 
 .dark-theme .title,
 .dark-theme .section__title,
@@ -448,12 +468,16 @@ nav {
 	font-size: 20px;
 }
 
+
+
 /* 
 
-	model 
+	Model 
 
 */
-.model {
+.model, 
+.about {
+	visibility: hidden;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -464,16 +488,17 @@ nav {
 	border-radius: 20px;
 	overflow: hidden;
 	display: flex;
-	visibility: hidden;
 	z-index: -1;
 	transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
 }
-.model--open .model{
+.model--open .model,
+.about--open .about{
 	z-index: 60;
 	box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
 	visibility: visible;
 }
-.model__half {
+.model__half,
+.about__half {
 	width: 50%;
 	padding: 40px 72px;
 	display: flex;
@@ -483,15 +508,36 @@ nav {
 	transition: all .3s ease-in;
 }
 
+.about__carousel{
+	padding: 20px 40px 20px 0px;
+}
+
 .model--open .model__about,
-.model--open .model__contact
+.model--open .model__contact,
+.about--open .about__description,
+.about--open .about__carousel
 {
 	transform: translateX(0%);
 }
 
-.model__about {
+
+.model__about,
+.about__description {
 	background-color: rgb(245, 245, 245);
 	transform: translateX(-110%);
+}
+
+.about__description{
+	background-color: #242424;
+}
+
+.about__para,
+.about__title{
+	color: white;
+}
+
+.about__title{
+	margin-bottom: 20px;
 }
 
 .model__languages {
@@ -530,13 +576,15 @@ nav {
 	width: 100%;
 }
 
-.model__contact {
+.model__contact,
+.about__carousel {
 	transform: translateX(110%);
 	background-color: #242424;
 	color: white;
 }
 
-.model__title {
+.model__title,
+.about__title {
 	font-size: 26px;
 }
 
@@ -550,10 +598,126 @@ nav {
 	
 }
 
-.model__para {
+.model__para,
+.about__para {
 	margin-bottom: 12px;
 	line-height: 1.75;
 }
+
+
+/* 
+
+	CAROUSEL
+
+*/
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+.carousel__img{
+	height: 80%;
+	width:100%;
+	box-shadow:6px 6px 18px 12px rgba(0,0,0,0.8);
+	border-radius: 5px;
+
+
+}
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 60px;
+	width: 100%;
+	text-align: center;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+
+.dot {
+	cursor: pointer;
+	height: 10px;
+	width: 10px;
+	margin: 20px 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+	background-color: #717171;
+}
+
+  /* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+  /* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+	.prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+/* 
+
+	FORM
+
+*/
 
 .form__item {
 	margin-bottom: 20px;

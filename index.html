@@ -27,7 +27,7 @@
 				<img id="personal-logo" src="./assets/logo.svg" alt="">
 			</figure>
 			<ul class="nav__link--list">
-				<li class="nav__link" onclick="toggleModel()">
+				<li class="nav__link" onclick="toggleAbout()">
 					<a href="#" class="
             nav__link--anchor
             link__hover-effect
@@ -92,6 +92,85 @@
 		<a href="#projects" class="scroll">
 			<div class="scroll__icon click"></div>
 		</a>
+
+		<div class="about">
+			<div class="about__half about__description">
+
+				<h3 class="about__title">Get to know me personally!</h3>
+
+				<p class="about__para">Hello, my name is <span class="blue">Eric Wang</span> and I am from <span
+						class="blue">Honolulu,
+						Hawaii</span>. I worked within in
+					the <span class="blue">hospitality
+						industry</span>
+					for over <span class="blue">8 years</span> but
+					due to the covid lockdown I found
+					the world of
+					development and programming instead and learned a great deal through<a
+						href="https://www.codingdojo.com/" target="_blank" class="link__click "> Coding
+						Dojo</a>.
+					<br>
+					<br>
+					My passion for code is to create a <span class="blue">memorable user experiences</span> through
+					<span class="blue">creative features</span> and other
+					frontend
+					designs while implementing a complex network of backend functionalities.
+					<br>
+					<br>
+					Aside from coding I enjoy a great deal of outdoor adventures such as traveling and ride my
+					collection of personal electric
+					vehicles. I also enjoy playing video games with friends on my free time.
+
+				</p>
+			</div>
+			<div class="about__half about__carousel">
+				<i class="fas fa-times model__exit click" onclick="toggleAbout()"></i>
+				<div class="slideshow-container">
+
+					<div class="mySlides fade">
+						<div class="numbertext">1 / 4</div>
+						<img class="carousel__img" src="./assets/Me.jpg">
+						<div class="text">My recent visit to the Golden Gate</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">2 / 4</div>
+						<img class="carousel__img" src="./assets/Smores.jpg">
+						<div class="text">My dog Smores</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">3 / 4</div>
+						<img class="carousel__img" src="./assets/Hidden Hike in Tantalus Hawaii.JPG">
+						<div class="text">Hidden Hike Location in Tantalus Hawaii</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">4 / 4</div>
+						<img class="carousel__img" src="./assets/Droneshot in PVE.jpg">
+						<div class="text">My Drone shot of PVE lighthouse</div>
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<div style="text-align:center">
+						<span class="dot" onclick="currentSlide(1)"></span>
+						<span class="dot" onclick="currentSlide(2)"></span>
+						<span class="dot" onclick="currentSlide(3)"></span>
+						<span class="dot" onclick="currentSlide(4)"></span>
+					</div>
+				</div>
+
+
+
+			</div>
+
+
+
+		</div>
+
+
 		<div class="model">
 			<div class="model__half model__about">
 				<h3 class="model__title model__title--about">Here's a bit about me!</h3>
