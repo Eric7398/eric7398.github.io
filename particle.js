@@ -22,7 +22,14 @@ window.addEventListener('click', function (event) {
     mouse.x = event.x
     mouse.y = event.y
     for (let i = 0; i < 1; i++) {
-        particlesArray.push(new Particle());
+        if (particlesArray.length === 10) {
+            particlesArray.pop();
+            particlesArray.splice(0, 0, new Particle())
+        } else {
+            particlesArray.push(new Particle())
+
+        }
+        console.log(particlesArray)
     }
 })
 
