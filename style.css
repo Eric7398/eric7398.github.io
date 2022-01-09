@@ -860,6 +860,12 @@ img {vertical-align: middle;}
 	text-align: center;
 	font-size: 48px;
 	margin-bottom: 60px;
+	text-shadow: 0 0 3px dodgerblue;
+	transition: all 1s ease;
+}
+
+.section__title:hover{
+	text-shadow: 0 0 3px orange
 }
 
 .project {

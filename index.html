@@ -10,6 +10,7 @@
 	<title>Eric Wang</title>
 	<script src="script.js"></script>
 	<link rel="icon" href="./assets/coding.png">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	<script type="text/javascript">
 		(function () {
@@ -280,11 +281,11 @@
 	<section id="projects">
 		<div class="container">
 			<div class="row">
-				<h1 class="section__title">
+				<h1 class="section__title" data-aos="flip-up" data-aos-duration="1500">
 					<span class="blue">My Projects</span>
 				</h1>
 				<ul class="project__list">
-					<li class="project">
+					<li class="project" data-aos="fade-right" data-aos-duration="1500">
 						<div class="project__wrapper">
 							<img src="./assets/blinker mockup.png" class="project__img" alt="Project">
 							<div class="project__wrapper--bg"></div>
@@ -311,7 +312,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="project">
+					<li class="project" data-aos="fade-left" data-aos-duration="1500">
 						<div class="project__wrapper">
 							<img src="./assets/blinker mockup.png" class="project__img" alt="Project">
 							<div class="project__wrapper--bg"></div>
@@ -339,7 +340,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="project">
+					<li class="project" data-aos="fade-right" data-aos-duration="1500">
 						<div class="project__wrapper">
 							<img src="./assets/blinker mockup.png" class="project__img" alt="Project">
 							<div class="project__wrapper--bg"></div>
@@ -372,7 +373,7 @@
 	</section>
 	<footer>
 		<div class="container">
-			<div class="row footer__row">
+			<div class="row footer__row" data-aos="fade-down" data-aos-duration="1500">
 				<a href="#" class="footer__anchor">
 					<figure class="footer__logo">
 						<img src="./assets/logo.svg" class="footer__logo--img" alt="">
@@ -416,6 +417,12 @@
 			</div>
 		</div>
 	</footer>
+
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 
 </html>
