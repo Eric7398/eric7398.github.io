@@ -6,6 +6,7 @@ const particlesArray = [];
 // let hue = 0;
 // let drawing = false;
 
+
 window.addEventListener('resize', function () {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -23,6 +24,8 @@ window.addEventListener('click', function (event) {
         particlesArray.push(new Particle());
     }
 })
+
+
 
 // window.addEventListener('mousemove', function (event) {
 //     if (drawing) {
@@ -74,6 +77,8 @@ class Particle {
     }
 }
 
+
+
 function handleParticles() {
     for (let i = 0; i < particlesArray.length; i++) {
         particlesArray[i].update();
@@ -101,6 +106,18 @@ function handleParticles() {
         }
     }
 }
+
+function init() {
+    setTimeout(() => {
+        for (let i = 0; i < 10; i++) {
+            mouse.x = Math.random() * canvas.width;
+            mouse.y = Math.random() * canvas.height;
+            particlesArray.push(new Particle())
+        }
+
+    }, 5000)
+}
+// init();
 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);

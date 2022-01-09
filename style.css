@@ -997,6 +997,10 @@ footer {
 	opacity: 1;
 }
 
+.mobile__title{
+	display: none;
+}
+
 /* Small phones, tablets, large smart phones */
 @media (max-width: 768px) {
 	.title{
@@ -1024,18 +1028,13 @@ footer {
 /* Small phones */
 @media (max-width: 480px) {
 	.title {
-		font-size: 20px;
-		font-family: 'Roboto', sans-serif;
-	}
-	.title::before{
 		display: none;
 	}
-	
-	.title::after{
-		display: none;
-	
-	}
+	.mobile__title{
+		display: flex;
+		font-size: 45px;
 
+	}
 	.header__para, .social__list{
 		transform: translateY(3rem);
 		animation: none;
