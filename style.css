@@ -1033,7 +1033,10 @@ footer {
 	.mobile__title{
 		display: flex;
 		font-size: 45px;
+	}
 
+	.dark-theme .mobile__title{
+		color: white;
 	}
 	.header__para, .social__list{
 		transform: translateY(3rem);

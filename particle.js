@@ -3,6 +3,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const particlesArray = [];
+let color = "orange";
 // let hue = 0;
 // let drawing = false;
 
@@ -55,11 +56,10 @@ class Particle {
         this.y = mouse.y;
         // this.x = Math.random() * canvas.width;
         // this.y = Math.random() * canvas.height;
-
         this.size = 25;
         this.speedX = Math.random() * 2 - 1;
         this.speedY = Math.random() * 2 - 1;
-        this.color = 'orange';
+        this.color = color;
         // this.color = 'hsl(' + hue + ',100%, 50%)'
     }
     update() {
@@ -70,7 +70,7 @@ class Particle {
     draw() {
         ctx.fillStyle = this.color;
         ctx.beginPath();
-        ctx.shadowColor = 'orange';
+        ctx.shadowColor = color;
         ctx.shadowBlur = 15;
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -91,9 +91,9 @@ function handleParticles() {
             // Pythagorean theorem 
             if (distance < 275) {
                 ctx.beginPath();
-                ctx.strokeStyle = 'orange'
+                ctx.strokeStyle = color
                 ctx.lineWidth = 10
-                ctx.shadowColor = 'orange';
+                ctx.shadowColor = color;
                 ctx.shadowBlur = 15;
                 ctx.moveTo(particlesArray[i].x, particlesArray[i].y)
                 ctx.lineTo(particlesArray[j].x, particlesArray[j].y)
