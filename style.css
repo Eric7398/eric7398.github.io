@@ -1006,7 +1006,7 @@ footer {
 }
 
 /* Small phones, tablets, large smart phones */
-@media (max-width: 764px) {
+@media (max-width: 778px) {
 	.title {
 		display: none;
 	}
@@ -1017,6 +1017,23 @@ footer {
 	.header__para {
 		font-size: 20px;
 	}
+
+	.social__list{
+		opacity: 1;
+	}
+	.header__para {
+		font-size: 18px;
+		opacity: 1;
+	}
+	.header__para, .social__list{
+		transform: translateY(3rem);
+		animation: none;
+	}
+
+		.dark-theme .mobile__title{
+		color: white;
+	}
+
 	.model,
 	.about {
 		top: 0;
