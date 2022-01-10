@@ -644,6 +644,10 @@ nav {
 	font-size: 26px;
 }
 
+/* .model__title--contact{
+	margin-bottom: 22px;
+} */
+
 .model__sub-title--contact{
 	color: #00ff37;
 }
@@ -651,7 +655,10 @@ nav {
 .model__sub-title {
 	margin: 12px 0 24px 0;
 	font-size: 14px;
-	
+}
+
+.model__sub-title--contact{
+	margin-bottom: 48px;
 }
 
 .model__para,
