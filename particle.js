@@ -27,9 +27,7 @@ window.addEventListener('click', function (event) {
             particlesArray.splice(0, 0, new Particle())
         } else {
             particlesArray.push(new Particle())
-
         }
-        console.log(particlesArray)
     }
 })
 
