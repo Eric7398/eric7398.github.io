@@ -94,7 +94,7 @@ textarea {
 label {
 	font-size: 14px;
 	font-weight: bold;
-	}
+}
 
 input:hover, textarea:hover {
 	border-color: #dcdfe6;
